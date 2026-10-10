@@ -1,0 +1,4 @@
+La aplicación está desplegada en el namespace {{ .Release.Namespace }}.
+Para verla desde tu PC, ejecuta:
+  kubectl port-forward -n {{ .Release.Namespace }} svc/{{ include "nginx-gitops.fullname" . }} 8081:{{ .Values.service.port }}
+Luego abre http://localhost:8081
